@@ -180,6 +180,8 @@ It requests the San Francisco Data API and loads the following table:
 Standing in the incidents-pipeline/dbt directory, in the Command Promt, run:  
 ```cmd
 dbt run
+```
+
 
 ## Analytics
 Some queries for the analysis are located in incidents-pipeline/analytics/analysis.sql  
