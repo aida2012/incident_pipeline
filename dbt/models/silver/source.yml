@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: metadata
+    database: incidents  
+    schema: metadata  
+    tables:
+      - name: load_tracker
+        description: "Load tracker table"

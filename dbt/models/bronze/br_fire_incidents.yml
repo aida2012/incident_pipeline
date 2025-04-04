@@ -1,0 +1,207 @@
+version: 2
+
+models:
+  - name: br_fire_incidents
+    description: "Raw fire incident data from bronze layer"
+    columns:
+      - name: incident_number
+        description: "A unique 8-digit number assigned by DEM to this Fire incident"
+
+      - name: exposure_number
+        description: "A sequence number indicates the order in which this address was involved in this fire incident."
+      
+      - name: id
+        description: "Identifier for the incident; original dataset field."
+      
+      - name: address
+        description: "Address of the incident."
+
+      - name: incident_date
+        description: "Date of the incident"
+
+      - name: call_number
+        description: "A unique 9-digit number assigned by the 911 Dispatch Center (DEM) to this call."
+      
+      - name: alarm_dttm
+        description: "Date and time the 911 operator dispatches the first unit to this call."
+      
+      - name: arrival_dttm
+        description: "Date and time the first unit arrives to the scene."
+      
+      - name: close_dttm
+        description: "Date and time the last unit is no longer assigned to this incident and the incident has been closed."
+      
+      - name: city
+        description: "City of incident"
+      
+      - name: zipcode
+        description: "Zipcode of incident"
+      
+      - name: battalion
+        description: "Emergency Response District"
+        tests:
+          - not_null
+      
+      - name: station_area
+        description: "Fire Station First Response Area associated with the address of the incident"
+
+      - name: box
+        description: "Fire box associated with the address of the incident."
+      
+      - name: suppression_units
+        description: "Total number of suppression units assigned to this incident."
+      
+      - name: suppression_personnel
+        description: "Total number of suppression personnel assigned to this incident."
+
+      - name: ems_units
+        description: "Total number of EMS units assigned to this incident."
+
+      - name: ems_personnel
+        description: "Total number of EMS personnel assigned to this incident."
+      
+      - name:  Other Units
+        description: "Total number of other units assigned to this incident."
+
+      - name: other_personnel
+        description: "Total number of other personnel assigned to this incident."
+
+      - name: first_unit_on_scene
+        description: "Unit identifier for the first unit to arrive to this incident."
+
+      - name: estimated_property_loss
+        description: "Estimated monetary loss of property due to damage from incident (structure)."
+
+      - name: estimated_contents_loss
+        description: "Estimated monetary loss of contents due to damage from incident."
+
+      - name: fire_fatalities
+        description: "Total number of firefighter lives lost at the incident."
+
+      - name: fire_injuries
+        description: "Total number of firefighter injuries due to this incident."
+
+      - name: civilian_fatalities
+        description: "Total number of civilian lives lost at the incident."
+
+      - name: civilian_injuries
+        description: "Total number of civilian injuries due to this incident."
+
+      - name: number_of_alarms
+        description: "Number of alarms associated with the incident."
+
+      - name: primary_situation
+        description: "Incident type that best describes the situation at the scene."
+
+      - name: mutual_aid
+        description: "Was mutual aid either given or received?"
+
+      - name: action_taken_primary
+        description: "Primary action taken to resolve the situation at the scene."
+
+      - name: action_taken_secondary
+        description: "Secondary action taken to resolve the situation at the scene."
+
+      - name: action_taken_other
+        description: "Other action taken to resolve the situation at the scene."
+
+      - name: detector_alerted_occupants
+        description: "Did a detector alerted the occupants?"
+
+      - name: property_use
+        description: "Description of the property use."
+
+      - name: area_of_fire_origin
+        description: "Area where the fire first started."
+
+      - name: ignition_cause
+        description: "Cause of ignition."
+
+      - name: ignition_factor_primary
+        description: "Primary factor contributing to ignition."
+
+      - name: ignition_factor_secondary
+        description: "Secondary factor contributing to ignition."
+
+      - name: heat_source
+        description: "Heat source used to ignite the first item involved in the fire."
+
+      - name: item_first_ignited
+        description: "Description of the first item ignited by the heat source."
+
+      - name: human_factors_associated_with_ignition
+        description: "Possible human factors contributing to the ignition."
+
+      - name: structure_type
+        description: "Type of structure involved in a structural fire."
+
+      - name: structure_status
+        description: "Status of the structure."
+
+      - name: floor_of_fire_origin
+        description: "Floor where the fire started."
+  
+      - name: fire_spread
+        description: "How did the fire spread?"
+
+      - name: no_flame_spread
+        description: "No flame spread?"
+
+      - name: num_floors_min_damage
+        description: "Number of floors with minimum damage."
+
+      - name: num_floors_significant_damage
+        description: "Number of floors with significant damage."
+
+      - name: num_floors_heavy_damage
+        description: "Number of floors with heavy damage."
+
+      - name: num_floors_extreme_damage
+        description: "Number of floors with extreme damage."
+
+      - name: detectors_present
+        description: "Were detectors present?"
+
+      - name: detector_type
+        description: "Type of detector in the area of the fire origin."
+
+      - name: detector_operation
+        description: "Best description of the operation of the detector."
+
+      - name: detector_effectiveness
+        description: "Description of the detector effectiveness."
+
+      - name: detector_failure_reason
+        description: "Description of why the detector fail to operate."
+
+      - name: automatic_extinguishing_system_present
+        description: "Was an Automatic Extinguishing System (AES) present?"
+
+      - name: automatic_extinguishing_system_type
+        description: "Description of the type of AES."
+
+      - name: automatic_extinguishing_system_performance
+        description: "Description of the AES performance."
+
+      - name: automatic_extinguishing_system_failure_reason
+        description: "Description of why the AES failed to operate."
+
+      - name: num_sprinkler_heads_operating
+        description: "Number of sprinkler heads the operated during the fire incident."
+
+
+      - name: point
+        description: "Latitude and Longitude associated with the call."
+
+      - name: supervisor_district
+        description: "Supervisor District associated with this address."
+      
+      - name: neighborhood_district
+        description: "Neighborhood District associated with this address."
+      
+      - name: insert_timestamp
+        description: "Timestamp of when the record was inserted."
+
+
+
+  

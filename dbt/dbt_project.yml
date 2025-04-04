@@ -1,0 +1,29 @@
+name: 'incident_pipeline'  
+version: '1.0'  
+profile: 'default'  
+
+model-paths:
+  - models  
+
+models:
+  incident_pipeline:
+    bronze:
+      +schema: bronze  
+      +materialized: ephemeral
+
+    silver:
+      +schema: silver  
+      +materialized: table
+      sl_fire_incidents:
+        +unique_key: fire_incident_id
+
+    gold:
+      +schema: gold    
+      dim_date:
+        +materialized: table
+        +incremental_strategy: append
+        +unique_key: date_id 
+      fact_fire_incidents:
+        +materialized: incremental
+        +incremental_strategy: append
+        +unique_key: fire_incident_id

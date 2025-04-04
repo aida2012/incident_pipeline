@@ -1,0 +1,7 @@
+pandas
+psycopg2
+sqlalchemy
+dbt-core
+dbt-postgres
+boto3
+PyYAML

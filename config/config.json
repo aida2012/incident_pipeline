@@ -1,0 +1,23 @@
+{
+    "AWS": {
+        "secret_name": "AWSSecrets",
+        "bucket": "incidents-pipeline",
+        "prefix": "datasets/validated/",
+        "region": "us-east-1"
+    },
+    "files": [
+        {"filename": "fire_incidents.csv",
+         "br_table": "br_fire_incidents"}
+
+    ],
+    "postgres": {
+      "secret_name": "PostgresSecrets",
+      "host": "localhost",
+      "port": 5432,
+      "database": "incidents"
+    },
+    "dbt": {
+        "validation_schema": "bronze"
+    }
+}
+

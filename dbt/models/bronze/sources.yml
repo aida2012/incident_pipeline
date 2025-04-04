@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: bronze
+    database: incidents  
+    schema: bronze  
+    tables:
+      - name: br_fire_incidents
+        description: "Fire incidents table"
