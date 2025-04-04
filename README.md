@@ -168,7 +168,7 @@ dbt will test, transform and load the data to the following tables in PostgresSQ
 - fact_fire_incidents
 
 ## Steps for INCREMENTAL LOADS
-### Step 1 - Run incrementa_api_to_bronze script  
+### Step 1 - Run incremental_api_to_bronze script  
 From a Command Prompt with venv active, standing in incidents-pipeline, run:  
 ```cmd
 python -m scripts.incremental_api_to_bronze
